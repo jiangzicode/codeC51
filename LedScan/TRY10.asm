@@ -24,21 +24,21 @@ NDHZ			BIT			08H				;ÃðÁã±êÖ¾
 
 ORG 0000H
 
-LJMP MAIN
-
+	LJMP MAIN
+	
 ORG 002BH
 
-LJMP CTC2
+	LJMP CTC2
 
 ORG 100H
 
 MAIN:
 
-MOV SP,#7FH
+		MOV SP,#7FH
 
-MOV SP,#5FH									;¶ÔÓÚÖ»ÓÐÇ°128×Ö½ÚµÄÄÚ²¿ramÐ¾Æ¬À´Ëµ£¬½«60H~70H,¹²¼Æ32×Ö½Ú×÷Îª¶ÑÕ»Çø
+		MOV SP,#5FH									;¶ÔÓÚÖ»ÓÐÇ°128×Ö½ÚµÄÄÚ²¿ramÐ¾Æ¬À´Ëµ£¬½«60H~70H,¹²¼Æ32×Ö½Ú×÷Îª¶ÑÕ»Çø
 
-MOV R0,#01H									;¸´Î»ºó£¬½«01H~0FFHÄÚ²¿RAMµ¥ÔªÇåÁã
+		MOV R0,#01H									;¸´Î»ºó£¬½«01H~0FFHÄÚ²¿RAMµ¥ÔªÇåÁã
 
 LOOP1:
 
@@ -168,20 +168,21 @@ CTC2:
 		
 		ADD A,#LEDBUF2				;Óë±Ê¶ÎÂë»º³åÇøÊ×µØÖ¹Ïà¼Ó£¬ÒÔ±ã»ñµÃ±Ê¶ÎÂëµØÖ·
 		
-				MOV R0,A							;ÏàÓ¦Î»±Ê¶ËµØÖ·±£´æÔÚR0ÖÐë
-MOV P2,@R0								;±Ê¶ÎÂëËÍP2¿Ú
+		MOV R0,A							;ÏàÓ¦Î»±Ê¶ËµØÖ·±£´æÔÚR0ÖÐë
+		
+		MOV P2,@R0								;±Ê¶ÎÂëËÍP2¿Ú
 
-;ËÍÉ¨ÃèÂë
+		;ËÍÉ¨ÃèÂë
 
-MOV A,LEDSP
+		MOV A,LEDSP
 
-ANL A,#07H								;½ö±£ÁôµÍÈýÎ»
+		ANL A,#07H								;½ö±£ÁôµÍÈýÎ»
 
-CJNE A,#7,NEXT1
+		CJNE A,#7,NEXT1
 
-MOV P0,#01111111B					;Êä³öÎ»É¨ÃèÂð£¨P0.7Î»ÁÁ£©
+		MOV P0,#01111111B					;Êä³öÎ»É¨ÃèÂð£¨P0.7Î»ÁÁ£©
 
-SJMP EXIT
+		SJMP EXIT
 
 NEXT1:
 
