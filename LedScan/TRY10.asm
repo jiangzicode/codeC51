@@ -28,7 +28,7 @@ ORG 0000H
 	
 ORG 002BH
 
-	LJMP CTC2
+	LJMP CTC2									;定时器2中断入口地址
 
 ORG 100H
 
