@@ -33,56 +33,42 @@ ORG 002BH
 ORG 100H
 
 MAIN:
+        MOV SP,#7FH
 
-		MOV SP,#7FH
-
-		MOV SP,#5FH									;¶ÔÓÚÖ»ÓÐÇ°128×Ö½ÚµÄÄÚ²¿ramÐ¾Æ¬À´Ëµ£¬½«60H~70H,¹²¼Æ32×Ö½Ú×÷Îª¶ÑÕ»Çø
+        MOV SP,#5FH									;¶ÔÓÚÖ»ÓÐÇ°128×Ö½ÚµÄÄÚ²¿ramÐ¾Æ¬À´Ëµ£¬½«60H~70H,¹²¼Æ32×Ö½Ú×÷Îª¶ÑÕ»Çø
 
 		MOV R0,#01H									;¸´Î»ºó£¬½«01H~0FFHÄÚ²¿RAMµ¥ÔªÇåÁã
 
 LOOP1:
 
-		MOV @R0,#0
-		
-		INC R0
-		
-		CJNE R0,#0,LOOP1
-	
-		
-		;³õÊ¼»¯¶¨Ê±Æ÷
-		
-		
-		MOV TH2,#00H
-		
-		MOV TL2,#00H
-		
-		MOV RCAP2H,#00H
-		
-		MOV RCAP2L,#00H
-		
-		MOV T2CON,#00000100B
-		
-		;³õÊ¼»¯ÖÐ¶Ï¿ØÖÆÆ÷
-		
-		SETB ET2
-		
-		SETB EA
-		
+MOV @R0,#0
 
-		
-		HERE: 
-		MOV 70H,#6
-		MOV 71H,#6
-		MOV 72H,#0
-		MOV 73H,#6
-		MOV 74H,#1
-		MOV 75H,#6
-		MOV 76H,#6
-		MOV 77H,#6
-		
-		LCALL DISPC
-		SJMP HERE
-		
+INC R0
+
+CJNE R0,#0,LOOP1
+
+
+;³õÊ¼»¯¶¨Ê±Æ÷
+
+
+MOV TH2,#00H
+
+MOV TL2,#00H
+
+MOV RCAP2H,#00H
+
+MOV RCAP2L,#00H
+
+MOV T2CON,#00000100B
+
+;³õÊ¼»¯ÖÐ¶Ï¿ØÖÆÆ÷
+
+SETB ET2
+
+SETB EA
+
+
+[å
 DISPTAB:
 
 DB 0C0H,0F9H,0A4H,0B0H,99H,92H,82H,0F8H,80H,90H,88H,83H,0C6H,0A1H,86H,8EH
@@ -140,9 +126,9 @@ DISPC:
 		
 		MOVC A,@A+DPTR
 		
-		MOV @R1,A							;±Ê¶ËÊýÂëËÍ±ÊÂëÏÔÊ¾»º³åÇø
-		
-		RET
+                                                		MOV @R1,A							;±Ê¶ËÊýÂëËÍ±ÊÂëÏÔÊ¾»º³åÇø
+                                                		
+                                                		RET
 		
 ;¶¨Ê±Æ÷T2×÷ÏÔÊ¾¶¨Ê±Æ÷£¨Òç³öÊ±¼ä2.5ºÁÃë£¬×Ô¶¯ÖØ×°³õÖµ·½Ê½£©
 
