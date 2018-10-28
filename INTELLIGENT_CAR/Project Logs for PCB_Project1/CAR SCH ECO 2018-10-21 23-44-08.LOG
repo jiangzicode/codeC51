@@ -1,0 +1,6 @@
+Remove Pin=*-1 From Net=P32
+Remove Pin=*-10 From Net=P30
+Remove Pin=*-11 From Net=P31
+Remove Pin=HC-05-2 From Net=P31
+Remove Pin=HC-05-3 From Net=P30
+Remove Pin=HC-05-6 From Net=P32
