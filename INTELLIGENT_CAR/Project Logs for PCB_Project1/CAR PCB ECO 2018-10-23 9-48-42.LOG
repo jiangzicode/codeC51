@@ -1,0 +1,15 @@
+Change Net Name : Old Net Name=Net*_24 New Net Name=6
+Change Net Name : Old Net Name=Net*_25 New Net Name=10
+Added Pin To Net: NetName=2 Pin=*-23
+Added Pin To Net: NetName=2 Pin=U1-12
+Added Net: Name=2
+Added Pin To Net: NetName=5 Pin=*-26
+Added Pin To Net: NetName=5 Pin=U1-5
+Added Net: Name=5
+Added Pin To Net: NetName=7 Pin=*-27
+Added Pin To Net: NetName=7 Pin=U1-7
+Added Net: Name=7
+Added Pin To Net: NetName=11 Pin=*-28
+Added Pin To Net: NetName=11 Pin=U1-11
+Added Net: Name=11
+Added Room: Name=CAR

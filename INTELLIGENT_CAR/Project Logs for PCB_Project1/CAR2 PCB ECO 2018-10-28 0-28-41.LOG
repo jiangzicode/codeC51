@@ -1,0 +1,4 @@
+Added Component: Designator=D16(LED-1)
+Added Pin To Net: NetName=NetD16_1 Pin=D16-1
+Added Pin To Net: NetName=LED0 Pin=D16-2
+Added Member To Class: ClassName=CAR Member=Component D16 
