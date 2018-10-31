@@ -1,5 +1,0 @@
-Added Pin To Net: NetName=LED0+ Pin=D14-1
-Added Pin To Net: NetName=RED1+ Pin=P6-2
-Added Pin To Net: NetName=LED0+ Pin=R3-1
-Change Net Name : Old Net Name=RED1+ New Net Name=RED0+
-Added Room: Name=CAR

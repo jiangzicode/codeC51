@@ -1,9 +1,0 @@
-Removed Pin From Net: NetName=GND Pin=P1-1
-Removed Member From Class: ClassName=CAR Member=P1
-Added Component: Designator=P?(HDR1X2)
-Added Pin To Net: NetName=GND Pin=P?-1
-Added Pin To Net: NetName=BP Pin=P?-2
-Added Pin To Net: NetName=BP Pin=U1-4
-Added Net: Name=BP
-Added Member To Class: ClassName=CAR Member=Component P? Header 2
-Added Room: Name=CAR

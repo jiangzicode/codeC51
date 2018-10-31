@@ -1,8 +1,0 @@
-Removed Pin From Net: NetName=6 Pin=*-24
-Removed Pin From Net: NetName=10 Pin=*-25
-Added Pin To Net: NetName=6 Pin=*-23
-Added Pin To Net: NetName=10 Pin=*-24
-Added Pin To Net: NetName=12 Pin=*-25
-Added Pin To Net: NetName=12 Pin=U1-12
-Added Net: Name=12
-Added Room: Name=CAR
